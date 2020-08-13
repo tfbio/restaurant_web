@@ -38,6 +38,7 @@ const ModalAddFood: React.FC<IModalProps> = ({
   const handleSubmit = useCallback(
     async (data: ICreateFoodData) => {
       handleAddFood(data);
+      // fecha o handleSubmit modal
       setIsOpen();
     },
     [handleAddFood, setIsOpen],

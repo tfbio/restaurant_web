@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import * as Yup from 'yup';
 import Header from '../../components/Header';
 
 import api from '../../services/api';
@@ -41,9 +42,20 @@ const Dashboard: React.FC = () => {
     food: Omit<IFoodPlate, 'id' | 'available'>,
   ): Promise<void> {
     try {
-      console.log('handleAddFood was called');
+      const schema = Yup.object().shape({
+        name: Yup.string().required('Name is required.'),
+        price: Yup.number().required('Price is required.'),
+        description: Yup.string().required('Description is required.'),
+      });
 
-      await api.post('/foods', food);
+      await schema.validate(food, {
+        abortEarly: false,
+      });
+
+      const newFood = await api.post<IFoodPlate>('/foods', food);
+      newFood.data.available = true;
+
+      setFoods([...foods, newFood.data]);
     } catch (err) {
       console.log(err);
     }
@@ -52,7 +64,18 @@ const Dashboard: React.FC = () => {
   async function handleUpdateFood(
     food: Omit<IFoodPlate, 'id' | 'available'>,
   ): Promise<void> {
-    // TODO UPDATE A FOOD PLATE ON THE API
+    /*
+    const schema = Yup.object().shape({
+      name: Yup.string(),
+      price: Yup.number(),
+      description: Yup.string(),
+    });
+
+    await schema.validate(food, {
+      abortEarly: false,
+    });
+    */
+    await api.put(`/foods`, food);
   }
 
   async function handleDeleteFood(id: number): Promise<void> {
@@ -72,7 +95,7 @@ const Dashboard: React.FC = () => {
   }
 
   function handleEditFood(food: IFoodPlate): void {
-    // TODO SET THE CURRENT EDITING FOOD ID IN THE STATE
+    toggleEditModal();
   }
 
   return (
