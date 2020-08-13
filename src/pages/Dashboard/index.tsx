@@ -64,26 +64,44 @@ const Dashboard: React.FC = () => {
   async function handleUpdateFood(
     food: Omit<IFoodPlate, 'id' | 'available'>,
   ): Promise<void> {
-    /*
-    const schema = Yup.object().shape({
-      name: Yup.string(),
-      price: Yup.number(),
-      description: Yup.string(),
-    });
+    try {
+      const schema = Yup.object().shape({
+        name: Yup.string(),
+        price: Yup.number(),
+        description: Yup.string(),
+      });
 
-    await schema.validate(food, {
-      abortEarly: false,
-    });
-    */
-    await api.put(`/foods`, food);
+      await schema.validate(food, {
+        abortEarly: false,
+      });
+
+      const response = await api.put<IFoodPlate>(`/foods/${editingFood.id}`, {
+        ...food,
+        id: editingFood.id,
+        available: true,
+      });
+      console.log(response);
+
+      setFoods(
+        foods.map(foodMap =>
+          foodMap.id === editingFood.id ? { ...response.data } : foodMap,
+        ),
+      );
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   async function handleDeleteFood(id: number): Promise<void> {
-    await api.delete(`/foods/${id}`).then(() => {
-      const removeDeleted = foods.filter(food => food.id !== id);
+    try {
+      await api.delete(`/foods/${id}`).then(() => {
+        const removeDeleted = foods.filter(food => food.id !== id);
 
-      setFoods(removeDeleted);
-    });
+        setFoods(removeDeleted);
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   function toggleModal(): void {
@@ -95,6 +113,7 @@ const Dashboard: React.FC = () => {
   }
 
   function handleEditFood(food: IFoodPlate): void {
+    setEditingFood(food);
     toggleEditModal();
   }
 

@@ -26,10 +26,11 @@
     },
     {
       "image": "",
-      "name": "Edit Test",
-      "price": "0.0",
-      "description": "test decrip",
-      "id": 4
+      "name": "Food Tamplate",
+      "price": "60.00",
+      "description": "Some description goes here 2",
+      "id": 4,
+      "available": true
     }
   ]
 }
