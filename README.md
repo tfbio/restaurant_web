@@ -5,7 +5,7 @@
   
 [![Author](https://img.shields.io/badge/author-Tfbio-brightgreen)](https://github.com/tfbio)
 [![Author](https://img.shields.io/badge/author-Rocketseat-brightgreen)](https://github.com/Rocketseat)
-[![Category](https://img.shields.io/badge/category-exercise-brightgreen)](#)
+[![Category](https://img.shields.io/badge/category-challenge-brightgreen)](#)
 [![Status](https://img.shields.io/badge/status-finished-brightgreen)](#)
 
 ---
@@ -13,15 +13,14 @@
 
 * [Overview](#mag-overview)
 * [Important](#heavy_exclamation_mark-important)
-* [Features](#paperclip-features)
 * [Setup](#wrench-setup)
 * [Running](#factory-running)
 
 # :mag: Overview
 
-# :heavy_exclamation_mark: Important
+**Frontend web for simple fictional e-commerce application developed using React
 
-# :paperclip: Features
+# :heavy_exclamation_mark: Important
 
 # :wrench: Setup
 
