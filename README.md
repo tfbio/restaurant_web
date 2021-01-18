@@ -18,7 +18,7 @@
 
 # :mag: Overview
 
-**Frontend web for simple fictional e-commerce application developed using React
+**Frontend web for simple fictional e-commerce application developed using React**
 
 # :heavy_exclamation_mark: Important
 
