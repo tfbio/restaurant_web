@@ -3,5 +3,6 @@
 </p>
 <h1 align="center">GoRestaurant Web<h1>
 
-[![Author](https://img.shields.io/badge/author-Rocketseat-green)](https://github.com/Rocketseat)
-[![Category](https://img.shields.io/badge/category-exercise-green)](#)
+[![Author](https://img.shields.io/badge/author-Rocketseat-brightgreen)](https://github.com/Rocketseat)
+[![Category](https://img.shields.io/badge/category-exercise-brightgreen)](#)
+[![Status](https://img.shields.io/badge/status-finished-brightgreen)](#)
