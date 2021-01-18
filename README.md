@@ -19,7 +19,7 @@
 # :mag: Overview
 
 **Frontend web for a simple fictional e-commerce application with restaurant services as main idea.**
-**Developed with React using [styled-components](https://styled-components.com/) for pages and components css definitions.**
+**Developed with React using [styled-components](https://styled-components.com/) for pages and components css definitions and [Jest](https://jestjs.io/) for testing**
 
 **This application was completed as a challenge during Rockeseat bootcamp.**
 
