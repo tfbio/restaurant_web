@@ -1,5 +1,5 @@
 <p align="center">
-   <img src=".github/restaurantweb_logo.jpg"/>
+   <img src="https://github.com/tfbio/restaurant_web/blob/master/github/restaurantweb_logo.jpg"/>
 </p>
 # GoRestaurant Web
 
