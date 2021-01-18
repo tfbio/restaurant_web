@@ -1,7 +1,7 @@
 <p align="center">
    <img src="https://github.com/tfbio/restaurant_web/blob/master/github/restaurantweb_logo.jpg"/>
 </p>
-# GoRestaurant Web
+#GoRestaurant Web
 
 <br />
 
