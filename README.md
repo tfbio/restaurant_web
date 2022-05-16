@@ -28,7 +28,3 @@
 **This application works together with its other parts: Backend API and mobile app. They can be reached in the links below:**
 - [GoRestaurant Backend](https://github.com/tfbio/e_commerce)
 - [GoRestaurant App](https://github.com/tfbio/restaurant_mobile)
-
-# :wrench: Setup
-
-# :factory: Running
