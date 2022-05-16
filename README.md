@@ -9,13 +9,6 @@
 [![Status](https://img.shields.io/badge/status-finished-brightgreen)](#)
 
 ---
-# :clipboard: Table of Contents
-
-* [Overview](#mag-overview)
-* [Important](#heavy_exclamation_mark-important)
-* [Setup](#wrench-setup)
-* [Running](#factory-running)
-
 # :mag: Overview
 
 **Frontend web for a simple fictional e-commerce application with restaurant services as main idea.**
